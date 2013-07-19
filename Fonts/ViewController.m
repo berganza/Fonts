@@ -23,16 +23,33 @@
     letraEstatica.text = @"Luis Berganza";
 
     
-//    Here are the steps transcribed:
+//    Pasos:
 //    
-//    - Add your custom font files into your project using Xcode as a resource
-//    - Add a key to your Info.plist file called UIAppFonts.
-//    - Make this key an array
-//    - For each font you have, enter the full name of your font file (including the extension) as items to the UIAppFonts array
-//    - Save Info.plist
-//    - Now in your application you can simply call [UIFont fontWithName:@"CustomFontName" size:12] to get the custom font to use with your UILabels and UITextViews, etc…
-//Also: Make sure the fonts are in your Copy Bundle Resources.
+//    - Agregar los archivos de fuentes personalizadas al proyecto
+//    - Agregar una línea (imagen adjunta) en el archivo nombreDeNuestroProyecto.plist de nuestro proyecto de tipo NSArray.
+//    - Para cada tipo de letra que quieras incluir, escribe el nombre completo del archivo de la fuente (incluida la extensión)
+//    - Guardar  el .plist
+//    - Ahora en la aplicación sólo tienes que llamar a [fontWithName UIFont:@"CustomFontName" size:12] para obtener la fuente personalizada para usar con los UILabels, UITextViews, etc 
+// Ojo: Asegúrate que las fuentes están copiadas en el Bundle.
+    
+    
+    // Para conocer todos los tipos de fuentes que podemos usar en nuestra aplicación
+    NSArray *tiposDeFuentes = [UIFont familyNames];
+    for(UIFont *fuente in tiposDeFuentes)
+    {
+        NSLog(@"%@",fuente);
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
